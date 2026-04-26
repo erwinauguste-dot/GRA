@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to Xcaret Mexico | Erwin Auguste</title>
+	<script src="https://kit.fontawesome.com/4feccb0936.js" crossorigin="anonymous"></script>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    background-image: url(mexico%20pic%20p7.jpg);
+    background-size: cover;
+}
+wrapper {
+    width: 1366px;
+    display: block;
+    margin: 0 auto;
+}
+header {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255,255,255,1.00);
+}
+footer {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.80);
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    font-size: 12px;
+    left: 0px;
+}
+#Tabs1 ul {
+    background-image: none;
+    border: none;
+    background-color: transparent;
+}
+#Tabs1 {
+    background-image: none;
+    background-color: rgba(255,255,255,0.20);
+}
+#Tabs1 li {
+    background-image: none;
+    background-color: rgba(255,255,255,0.80);
+    text-align: center;
+}
+#Tabs1 li i {
+    color: rgba(146,42,44,1.00);
+    font-size: 24px;
+}
+.logo {
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+#tabs-1,#tabs-2,#tabs-3,#tabs-4,#tabs-5{
+    background-image: none;
+    background-color: rgba(255,255,255,0.80);
+}
+#tabs-1 div {
+	display:grid;
+	grid-template-columns: 16% 16% 16% 16% 16% 10%;
+	gap:10px;
+	
+		
+}
+	#tabs-2 div {
+	display:grid;
+	grid-template-columns: 20% 20% 20% 20% 10%;
+	gap:10px;
+	
+		
+}
+	#tabs-3 div {
+	display:grid;
+	grid-template-columns: 12% 12% 12% 12% 12% 12% 12%;
+	gap:10px;
+	
+		
+}
+	
+	#tabs-4 div {
+	display:grid;
+	grid-template-columns: 20% 20% 20% 20% 10%;
+	gap:10px;
+			
+}
+	#tabs-5 div {
+	display:grid;
+	grid-template-columns: 40% 40% 10%;
+	gap:10px;
+			
+}
+.search {
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+}
+input, select {
+    border-radius: 10px;
+    border: thin solid grey;
+    padding: 10px;
+}
+body wrapper div {
+}
+p  {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+}
+#footerp {
+    font-weight: normal;
+    font-size: 20px;
+}
+</style>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+</head>
+
+<body>
+<header>
+  <wrapper><img src="logo.png" alt="" width="654" height="630" class="logo"/>Travel Express </wrapper>
+</header>
+<wrapper>
+<main>
+	<div id="Tabs1">
+	  <ul>
+	    <li><a href="#tabs-1"><i class="fa-solid fa-plane"></i><br>
+Flights</a></li>
+	    <li><a href="#tabs-2"><i class="fa-solid fa-hotel"></i><br>
+Hotel</a></li>
+        <li><a href="#tabs-3"><i class="fa-solid fa-car"></i><br>
+Cars</a></li>
+        <li><a href="#tabs-4"><i class="fa-solid fa-suitcase-rolling"></i><br>
+Packages</a></li>
+        <li><a href="#tabs-5"><i class="fa-solid fa-volleyball"></i><br>
+Activities</a></li>
+	  </ul>
+	  <div id="tabs-1">
+	    <p>Find Your Flight</p>
+		  <div>
+		  <input type="text" placeholder="Leaving From"><input type="text" placeholder="Going To"><input type="date"><input type="date"><select>
+		    <option value="0" selected="selected">Number of Travelers</option>
+		    <option value="1">1</option>
+		    <option value="2">2</option>
+		    <option value="3">3</option>
+		    <option value="4">4</option>
+		    <option value="5">5</option>
+		  </select><input type="submit" class="search" value="Search">
+		  </div>
+      </div>
+	  <div id="tabs-2">
+	    <p>Find Your Hotel</p>
+		  <div>
+		  <input type="text" placeholder="Where To"><input type="date"><input type="date"><select>
+		    <option value="0" selected="selected">Number of Travelers</option>
+		    <option value="1">1</option>
+		    <option value="2">2</option>
+		    <option value="3">3</option>
+		    <option value="4">4</option>
+		    <option value="5">5</option>
+		  </select><input type="submit" class="search" value="Search">
+		  </div>
+      </div>
+      <div id="tabs-3">
+        <p>Find Your Rental Vehicle</p>
+		  <div>
+		  <input type="text" placeholder="Pick Up"><input type="text" placeholder="Drop Off"><input type="date"><input type="date"><input type="time"><input type="time"><input type="submit" class="search" value="Search">
+		  </div>
+      </div>
+      <div id="tabs-4">
+        <p>Bundle and Save</p>
+        <div>
+          <input type="text" placeholder="Leaving From">
+          <input type="text" placeholder="Going To"><input type="date"><select>
+            <option value="0">Number of Traveleras</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+          <input type="submit" class="search" value="Search">
+        </div>
+      </div>
+      <div id="tabs-5">
+        <p>Things To Do</p>
+		  <div>
+		  <input type="text" value="Going To">
+			  <input type="datetime-local">
+			  <input type="search" class="search" value="Search">
+		  </div>
+      </div>
+	</div>
+  </main>
+<footer>
+    <p id="footerp">© 2026, Erwin Auguste. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </footer>
+</wrapper>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>
