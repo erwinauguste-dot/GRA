@@ -42,7 +42,10 @@ nav img { display:block; width:34px; height:34px; object-fit:contain; flex-shrin
 .hero { display:grid; grid-template-columns:1.15fr 1fr; gap:18px; padding:clamp(16px,3vw,32px); background:#f3f9fe; }
 .hero-photo,.hero-video { display:block; width:100%; aspect-ratio:16/9; border-radius:14px; overflow:hidden; box-shadow:0 4px 16px rgba(15,54,92,.12); }
 .hero-photo { object-fit:cover; }
-.hero-video { border:0; }
+.hero-video {
+    border: 0;
+    height: 412px;
+}
 .gallery-heading { padding:30px clamp(18px,3vw,36px) 0; }
 .gallery-heading h2 {
     font-size: xx-large;
@@ -91,9 +94,9 @@ footer {
 }
 @media (min-width:750px) { main { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (min-width:1500px) { main { grid-template-columns:repeat(3,minmax(0,1fr)); } }
-@media (max-width:749px) { wrapper { margin:10px auto; width:96%; border-radius:12px; } .header-top { grid-template-columns:110px minmax(0,1fr); gap:12px; padding:18px; } #avatar { grid-column:1/-1; justify-self:center; max-width:100px; height:105px; } .hero { grid-template-columns:1fr; } nav a { flex-direction:column; gap:6px; font-size:.82rem; text-align:center; } nav img { width:28px; height:28px; } }
+@media (max-width:749px) { wrapper { margin:10px auto; width:96%; border-radius:12px; } .header-top { grid-template-columns:110px minmax(0,1fr); gap:12px; padding:18px; } .hero { grid-template-columns:1fr; } nav a { flex-direction:column; gap:6px; font-size:.82rem; text-align:center; } nav img { width:28px; height:28px; } }
 @media (max-width:390px) { .header-top { grid-template-columns:85px minmax(0,1fr); } nav a { font-size:.72rem; padding:10px 2px; } nav img { width:24px; height:24px; } }
-@media (prefers-reduced-motion:reduce) { #avatar { animation:none; opacity:1; } html { scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 
 /* Gentle, responsive pulse for the main headline */
 .header-copy h1 {
@@ -107,6 +110,38 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     .header-copy h1 { animation: none; }
 }
+
+/* Aligned header: balanced image columns and centered headline */
+.header-top {
+    grid-template-columns: minmax(0, 170px) minmax(0, 1fr) minmax(0, 170px);
+    align-items: center;
+    gap: clamp(12px, 2.5vw, 32px);
+}
+#logo, #avatar {
+    width: 100%;
+    max-width: 155px;
+    height: 155px;
+    object-fit: contain;
+    object-position: center;
+    justify-self: center;
+    margin: 0;
+}
+.header-copy { display: flex; align-items: center; justify-content: center; text-align: center; }
+.header-copy h1 { font-size: clamp(1.05rem, 2.5vw, 2.2rem); max-width: 100%; }
+@media (max-width: 749px) {
+    .header-top {
+        grid-template-columns: minmax(0, 85px) minmax(0, 1fr) minmax(0, 85px);
+        gap: 10px;
+        padding: 16px 12px;
+    }
+    #logo, #avatar { max-width: 85px; height: 95px; }
+    .header-copy h1 { font-size: clamp(.82rem, 3.4vw, 1.5rem); }
+}
+@media (max-width: 390px) {
+    .header-top { grid-template-columns: minmax(0, 65px) minmax(0, 1fr) minmax(0, 65px); gap: 6px; }
+    #logo, #avatar { max-width: 65px; height: 75px; }
+    .header-copy h1 { font-size: clamp(.72rem, 3.1vw, 1rem); }
+}
 </style>
 </head>
 <body>
@@ -114,28 +149,28 @@ footer {
 <header class="site-header">
 <div class="header-top">
 <img id="logo" src="images/New%20Logo.svg" alt="August Breeze logo">
-<div class="header-copy">
-<h1>YOUR COMFORT IS OUR BUSINESS!!!</h1></div>
-<img id="avatar" src="images/Gmail%20Avatar.png" alt="August Breeze avatar">
+<div class="header-copy"><h1>YOUR COMFORT IS OUR BUSINESS!!!</h1></div>
+<img src="images/images2/Gmail%20Avatar.png" alt="August Breeze avatar" width="731" height="938" id="avatar">
 </div>
 <nav aria-label="Services"><ul>
-<li><a href="#gallery"><img src="images/icicle-png.png" alt="" aria-hidden="true"><span>Cooling</span></a></li>
-<li><a href="#gallery"><img src="images/fire.png" alt="" aria-hidden="true"><span>Heating</span></a></li>
-<li><a href="#gallery"><img src="images/maintenance.png" alt="" aria-hidden="true"><span>Maintenance</span></a></li>
-<li><a href="#gallery"><img src="images/installation.png" alt="" aria-hidden="true"><span>Installations</span></a></li>
+<li><a href="#gallery"><img src="images/images2/icicle-png.png" alt="" width="504" height="646"><span>Cooling</span></a></li>
+<li><a href="#gallery"><img src="images/images2/fire.png" alt="" width="360" height="360"><span>Heating</span></a></li>
+<li><a href="#gallery"><img src="images/images2/maintenance.png" alt="" width="512" height="512"><span>Maintenance</span></a></li>
+<li><a href="#gallery"><img src="images/images2/installation.png" alt="" width="201" height="175"><span>Installations</span></a></li>
 </ul></nav>
-<div class="hero"><img class="hero-photo" src="images/las-olas-background.jpg" alt="Las Olas waterfront"><iframe class="hero-video" src="https://www.youtube.com/embed/_pBCBoc-eGw?si=QLK5ITg1p64yJrEy" title="August Breeze video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="hero"><img src="images/images2/las-olas-background.jpg" alt="" width="612" height="408" class="hero-photo">
+  <iframe class="hero-video" src="https://www.youtube.com/embed/_pBCBoc-eGw?si=QLK5ITg1p64yJrEy" title="August Breeze video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 </header>
 <div class="gallery-heading" id="gallery">
-  <div class="county-grid" aria-label="Counties we serve"><img src="images/palm-beach.jpg" alt="Palm Beach County" width="547" height="365" class="county"><img src="images/broward.png" alt="Broward County" width="547" height="365" class="county"><img src="images/miami%20dade.jpg" alt="Miami-Dade County" width="540" height="370" class="county"></div><h2>Proudly Serving the Tri-County Area</h2></div>
+  <div class="county-grid" aria-label="Counties we serve"><img src="images/images2/palm-beach.jpg" alt="" width="547" height="365" class="county"><img src="images/broward.jpg" alt="" width="547" height="365" class="county"><img src="images/images2/miami%20dade.jpg" alt="" width="540" height="370" class="county"> </div><h2>Proudly Serving the Tri-County Area</h2></div>
 <main>
 <section class="project-card"><img src="images/DSC04524.jpg" alt="August Breeze project 1" loading="lazy"></section>
 <section class="project-card"><img src="images/DSC04005.jpg" alt="" width="7008" height="4672"></section>
 <section class="project-card"><img src="images/DSC04401.jpg" alt="" width="7008" height="4672"></section>
 <section class="project-card"><img src="images/DSC04562.jpg" alt="August Breeze project 2" loading="lazy"></section>
 <section class="project-card"><img src="images/20210317_133444%20(1).jpg" alt="August Breeze project 7" loading="lazy"></section>
-<section class="project-card"><img src="images/Precision%20Tune-Up.jpg" alt="August Breeze project 5" loading="lazy"></section>
-<section class="project-card"><img src="images/Untitled1.png" alt="August Breeze project 6" loading="lazy"></section>
+<section class="project-card"><img src="images/images2/Precision%20Tune-Up.jpg" alt="" width="7008" height="4672"></section>
+<section class="project-card"><img src="images/images2/Untitled1.png" alt="" width="3509" height="2217"></section>
 <section class="project-card"><img src="images/178097366_4093091937413651_2984352820850481780_n.jpg" alt="August Breeze project 8" loading="lazy"></section>
 <section class="project-card"><img src="images/August%20Breeze%20Service%20Call%20&amp;%20Diagnostic.jpg" alt="August Breeze project 9" loading="lazy"></section>
 <section class="project-card"><img src="images/178404415_4093091817413663_7892457714332543141_n.jpg" alt="" width="2016" height="1512"></section>
@@ -144,8 +179,8 @@ footer {
 <section class="project-card"><img src="images/DSC04437.jpg" alt="" width="7008" height="4672"></section>
 <section class="project-card"><img src="images/DSC05020.jpg" alt="August Breeze project 12" loading="lazy"></section>
 <section class="project-card"><img src="images/DSC04924.jpg" alt="" width="7008" height="4672"></section>
-<section class="project-card"><img src="images/unnamed1.jpg" alt="" width="1024" height="768"></section>
-<section class="project-card"><img src="images/Screenshot_20240919_001631_WhatsApp.jpg" alt="" width="1060" height="786"></section>
+<section class="project-card"><img src="images/images2/unnamed1.jpg" alt="" width="1024" height="768"></section>
+<section class="project-card"><img src="images/images2/Screenshot_20240919_001631_WhatsApp.jpg" alt="" width="1060" height="786"></section>
 <section class="project-card"><img src="images/20240226_093341.jpg" alt="" width="4032" height="3024"></section>
 </main>
 </wrapper>
