@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07549f">
+<title>August Breeze | Your Comfort Is Our Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --blue:#07549f; --deep:#092c53; --ice:#e9f5ff; --border:#d8e5f1; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:#17324d; background:#e9f2f9 url('images/blurry-snowflakes-winter-wallpaper_23-2148720135.png') center top / cover fixed; font-family:'DM Sans',Arial,sans-serif; }
+img,svg,iframe { max-width:100%; }
+wrapper { display:block; width:min(94%,1400px); margin:24px auto; background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 18px 60px rgba(8,40,76,.15); }
+.site-header { background:linear-gradient(130deg,#fff 45%,#e8f5ff); }
+.header-top { display:grid; grid-template-columns:minmax(0,180px) minmax(0,1fr) minmax(0,145px); align-items:center; gap:24px; padding:25px clamp(18px,4vw,48px); }
+#logo { display:block; width:100%; max-width:170px; height:auto; object-fit:contain; }
+.header-copy { min-width:0; }
+.eyebrow { margin:0 0 8px; font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#2877bb; }
+h1 {
+    margin: 0;
+    color: rgba(7,84,159,1.00);
+    font-size: 35px;
+    line-height: 1.13;
+    letter-spacing: -.035em;
+    font-weight: lighter;
+    font-family: Frijole;
+    text-align: center;
+}
+.header-subtitle { margin:12px 0 0; font-size:clamp(.88rem,1.2vw,1.06rem); color:#47657e; }
+#avatar { display:block; width:100%; max-width:140px; height:155px; object-fit:contain; object-position:center bottom; justify-self:end; opacity:0; animation:avatarFadeIn 2s ease-out forwards; }
+@keyframes avatarFadeIn { from {opacity:0;} to {opacity:1;} }
+nav { background:var(--blue); padding:0 clamp(12px,3vw,40px); }
+nav ul { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; padding:8px 0; margin:0; list-style:none; }
+nav li { min-width:0; }
+nav a { display:flex; justify-content:center; align-items:center; gap:11px; padding:12px 8px; color:white; font-weight:700; text-decoration:none; border-radius:9px; transition:background .2s ease; }
+nav a:hover,nav a:focus-visible { background:rgba(255,255,255,.18); outline-offset:2px; }
+nav img { display:block; width:34px; height:34px; object-fit:contain; flex-shrink:0; }
+.hero { display:grid; grid-template-columns:1.15fr 1fr; gap:18px; padding:clamp(16px,3vw,32px); background:#f3f9fe; }
+.hero-photo,.hero-video { display:block; width:100%; aspect-ratio:16/9; border-radius:14px; overflow:hidden; box-shadow:0 4px 16px rgba(15,54,92,.12); }
+.hero-photo { object-fit:cover; }
+.hero-video { border:0; }
+.gallery-heading { padding:30px clamp(18px,3vw,36px) 0; }
+.gallery-heading h2 {
+    font-size: xx-large;
+    color: var(--deep);
+    margin: 0 0 8px;
+    text-align: center;
+    font-weight: 700;
+}
+.gallery-heading p { margin:0; color:#5c7388; }
+main { display:grid; grid-template-columns:minmax(0,1fr); gap:20px; padding:24px clamp(18px,3vw,36px) 38px; }
+.project-card { min-width:0; overflow:hidden; border:1px solid var(--border); border-radius:14px; background:var(--ice); box-shadow:0 5px 16px rgba(15,54,92,.07); }
+.project-card img { display:block; width:100%; aspect-ratio:4/3; height:auto; object-fit:cover; }
+footer {
+    width: min(94%,1400px);
+    margin: 0 auto 28px;
+    padding: 12px 18px;
+    font-size: .82rem;
+    line-height: 1.65;
+    color: #000000;
+    text-align: center;
+}
+.county {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 16px rgba(15,54,92,.09);
+}
+.county-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0 auto 20px;
+    width: 100%;
+}
+.county-grid > img { min-width: 0; }
+@media (max-width: 749px) {
+    .county-grid { grid-template-columns: 1fr; gap: 12px; }
+    .county { aspect-ratio: 16 / 9; }
+}
+@media (min-width: 750px) and (max-width: 1050px) {
+    .county-grid { gap: 12px; }
+}
+@media (min-width:750px) { main { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1500px) { main { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:749px) { wrapper { margin:10px auto; width:96%; border-radius:12px; } .header-top { grid-template-columns:110px minmax(0,1fr); gap:12px; padding:18px; } #avatar { grid-column:1/-1; justify-self:center; max-width:100px; height:105px; } .hero { grid-template-columns:1fr; } nav a { flex-direction:column; gap:6px; font-size:.82rem; text-align:center; } nav img { width:28px; height:28px; } }
+@media (max-width:390px) { .header-top { grid-template-columns:85px minmax(0,1fr); } nav a { font-size:.72rem; padding:10px 2px; } nav img { width:24px; height:24px; } }
+@media (prefers-reduced-motion:reduce) { #avatar { animation:none; opacity:1; } html { scroll-behavior:auto; } }
+
+/* Gentle, responsive pulse for the main headline */
+.header-copy h1 {
+    transform-origin: center center;
+    animation: headlinePulse 2.8s ease-in-out infinite;
+}
+@keyframes headlinePulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.035); opacity: .86; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .header-copy h1 { animation: none; }
+}
+</style>
+</head>
+<body>
+<wrapper>
+<header class="site-header">
+<div class="header-top">
+<img id="logo" src="images/New%20Logo.svg" alt="August Breeze logo">
+<div class="header-copy">
+<h1>YOUR COMFORT IS OUR BUSINESS!!!</h1></div>
+<img id="avatar" src="images/Gmail%20Avatar.png" alt="August Breeze avatar">
+</div>
+<nav aria-label="Services"><ul>
+<li><a href="#gallery"><img src="images/icicle-png.png" alt="" aria-hidden="true"><span>Cooling</span></a></li>
+<li><a href="#gallery"><img src="images/fire.png" alt="" aria-hidden="true"><span>Heating</span></a></li>
+<li><a href="#gallery"><img src="images/maintenance.png" alt="" aria-hidden="true"><span>Maintenance</span></a></li>
+<li><a href="#gallery"><img src="images/installation.png" alt="" aria-hidden="true"><span>Installations</span></a></li>
+</ul></nav>
+<div class="hero"><img class="hero-photo" src="images/las-olas-background.jpg" alt="Las Olas waterfront"><iframe class="hero-video" src="https://www.youtube.com/embed/_pBCBoc-eGw?si=QLK5ITg1p64yJrEy" title="August Breeze video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</header>
+<div class="gallery-heading" id="gallery">
+  <div class="county-grid" aria-label="Counties we serve"><img src="images/palm-beach.jpg" alt="Palm Beach County" width="547" height="365" class="county"><img src="images/broward.png" alt="Broward County" width="547" height="365" class="county"><img src="images/miami%20dade.jpg" alt="Miami-Dade County" width="540" height="370" class="county"></div><h2>Proudly Serving the Tri-County Area</h2></div>
+<main>
+<section class="project-card"><img src="images/DSC04524.jpg" alt="August Breeze project 1" loading="lazy"></section>
+<section class="project-card"><img src="images/DSC04005.jpg" alt="" width="7008" height="4672"></section>
+<section class="project-card"><img src="images/DSC04401.jpg" alt="" width="7008" height="4672"></section>
+<section class="project-card"><img src="images/DSC04562.jpg" alt="August Breeze project 2" loading="lazy"></section>
+<section class="project-card"><img src="images/20210317_133444%20(1).jpg" alt="August Breeze project 7" loading="lazy"></section>
+<section class="project-card"><img src="images/Precision%20Tune-Up.jpg" alt="August Breeze project 5" loading="lazy"></section>
+<section class="project-card"><img src="images/Untitled1.png" alt="August Breeze project 6" loading="lazy"></section>
+<section class="project-card"><img src="images/178097366_4093091937413651_2984352820850481780_n.jpg" alt="August Breeze project 8" loading="lazy"></section>
+<section class="project-card"><img src="images/August%20Breeze%20Service%20Call%20&amp;%20Diagnostic.jpg" alt="August Breeze project 9" loading="lazy"></section>
+<section class="project-card"><img src="images/178404415_4093091817413663_7892457714332543141_n.jpg" alt="" width="2016" height="1512"></section>
+<section class="project-card"><img src="images/DSC04025.jpg" alt="" width="7008" height="4672"></section>
+<section class="project-card"><img src="images/DSC04296.jpg" alt="August Breeze project 10" loading="lazy"></section>
+<section class="project-card"><img src="images/DSC04437.jpg" alt="" width="7008" height="4672"></section>
+<section class="project-card"><img src="images/DSC05020.jpg" alt="August Breeze project 12" loading="lazy"></section>
+<section class="project-card"><img src="images/DSC04924.jpg" alt="" width="7008" height="4672"></section>
+<section class="project-card"><img src="images/unnamed1.jpg" alt="" width="1024" height="768"></section>
+<section class="project-card"><img src="images/Screenshot_20240919_001631_WhatsApp.jpg" alt="" width="1060" height="786"></section>
+<section class="project-card"><img src="images/20240226_093341.jpg" alt="" width="4032" height="3024"></section>
+</main>
+</wrapper>
+<footer>© 2026, Erwin Auguste. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</footer>
+</body>
+</html>
